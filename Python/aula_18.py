@@ -109,3 +109,40 @@ for linha in range(0,3):
     print()
 
 '''
+'''
+#87
+
+#gerando matriz 3x3 somando valores pares, somando a terceira coluna toda e vendo qual o maior valor da segunda coluna.
+
+
+matriz = [[0,0,0], [0,0,0], [0,0,0]]
+soma = soma_2 = compara = 0
+
+for linha in range(0,3):
+    for coluna in range(0,3):
+        matriz[linha] [coluna] = int(input(f'Digite o valor da posição [{linha},{coluna}]: '))
+
+        if matriz[linha] [coluna] %2 == 0:
+            soma += matriz[linha] [coluna]
+
+print('=='*20)
+print('A matriz gerada foi: ')
+
+for linha in range(0,3):
+    for coluna in range (0,3):
+        print(f'{matriz[linha] [coluna]:^5}', end='')
+    print()
+
+for linha in range(0,3):
+    soma_2 += matriz[linha][2]
+
+for maior in matriz[1]:
+    if maior > compara:
+        compara = maior
+
+print(f'A soma dos valores pares foi {soma}')
+
+print(f'A soma dos valores da 3 coluna é {soma_2}')
+
+print(f'O maior valor da segunda linha é {compara}')
+'''
