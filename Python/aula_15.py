@@ -140,7 +140,7 @@ print(f'Ao todo temos {conta_hom} homens cadastrados.')
 print(f'E temos {conta_mul_menor} com menos de 20 anos.')
 
 '''
-'''
+
 #70
 
 print('Avaliando compras de produto')
@@ -225,3 +225,5 @@ while True:
         
         if total == 0:
             break
+
+'''
