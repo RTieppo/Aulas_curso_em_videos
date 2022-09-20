@@ -89,5 +89,23 @@ for ajuste in valores[1]:
     print(ajuste, end=' ')
 '''
 
+'''
+gerando matriz 3x3
 #86
 
+matriz3x3 = [[0, 0, 0], [0, 0, 0], [0, 0, 0,]]
+ 
+for linha in range(0,3):
+    for coluna in range(0,3):
+        matriz3x3 [linha] [coluna] = int(input(f'Digite o valor da posição [{linha},{coluna}]: '))
+
+print('==' *20)
+
+print('A matrix gerada foi')
+
+for linha in range(0,3):
+    for coluna in range(0,3):
+        print(f'{matriz3x3[linha][coluna]:^5}', end=' ')
+    print()
+
+'''
