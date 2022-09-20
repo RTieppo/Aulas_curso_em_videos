@@ -1,5 +1,5 @@
 #listas part 2
-
+'''
  # 84
 
 dados = list()
@@ -58,3 +58,36 @@ print(f'\nO menor peso foi {menor}kg. ', end='')
 for p in cadastro:
     if p[1] == menor:
         print(f'{p[0]}', end=' ')
+
+'''
+'''
+# 85
+
+# coletando 7 valores e dividindo entre impar e par em ordem decrecente
+
+valores = [[], []]
+
+for valor in range(1,8):
+    valor_user = int(input(f'Digite o {valor}º valor: '))
+    
+    if valor_user %2 == 0:
+        valores[0].append(valor_user)
+
+    else:
+        valores[1].append(valor_user)
+
+print('=='*20)
+
+print('Os valores pares digitados foram: ', end='')
+valores[0].sort()
+for ajuste in valores[0]:
+    print(ajuste, end=' ')
+
+print('\nOs valores ímpares digitados foram: ', end='')
+valores[1].sort()
+for ajuste in valores[1]:
+    print(ajuste, end=' ')
+'''
+
+#86
+
