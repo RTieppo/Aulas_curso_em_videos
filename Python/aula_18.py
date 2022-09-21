@@ -146,3 +146,47 @@ print(f'A soma dos valores da 3 coluna é {soma_2}')
 
 print(f'O maior valor da segunda linha é {compara}')
 '''
+
+'''
+#88
+
+#palpites para a mega sena
+
+import random
+from time import sleep
+
+jogos = numeros = 0
+
+lista_numeros = list()
+
+
+print('--'*16)
+print('{:^32}'.format('NUMEROS MEGA SENA'))
+print('--'*16)
+
+palpites = int(input('Quantos jogos você quer sortear? '))
+
+print(f'Sorteando {palpites} jogos')
+
+while jogos < palpites:
+    
+    while numeros < 6:
+        
+        sorteio = random.randint(0,60)
+
+        if sorteio in lista_numeros:
+            pass
+
+        else:
+            lista_numeros.append(sorteio)
+            numeros += 1
+            
+    jogos += 1
+    numeros = 0
+    lista_numeros.sort()
+    print(f'Jogo {jogos}: {lista_numeros}')
+    lista_numeros.clear()
+    sleep(0.5)
+
+print('Boa sorte')
+'''
