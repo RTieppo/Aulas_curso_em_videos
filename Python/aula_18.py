@@ -190,3 +190,43 @@ while jogos < palpites:
 
 print('Boa sorte')
 '''
+
+#89
+#boletim com listas compostas
+
+lista_alunos = list()
+
+print('Cadastro de notas')
+
+while True:
+
+    nome = str(input('Nome: ')) 
+    nota1 = float(input('Nota 1: '))
+    nota2 = float(input('Nota 2: '))
+    media = (nota1+nota2)/2 
+    lista_alunos.append([nome,[nota1,nota2],media])
+
+    continuar = str(input('Quer continuar? [S/N]'))
+
+    if continuar in 'Nn':
+        break
+    
+print('==='*10)
+print(f'{"Nº":<4}{"NOME":<10}{"MÉDIA":>8}')
+print('---'*10)
+
+for indi, alu in enumerate(lista_alunos):
+    print(f'{indi:<4}{alu[0]:<10}{alu[2]:>8.1f}')
+
+while True:
+    print('--'*10)
+
+    notas = int(input('Mostrar notas de qual aluno? (999 interrompe): '))
+    
+    if notas == 999:
+        print(' FINALIZANDO...')
+        break
+
+    if notas <= len(lista_alunos) -1:
+        print(f'Notas de {lista_alunos[notas][0]} são {lista_alunos[notas][1]}')
+print('<<< VOLTE SEMPRE >>>')
