@@ -59,3 +59,31 @@ for i, v in enumerate(ranking):
     sleep(0.5)
 '''
 
+#92
+
+from datetime import date
+
+cadastro_pessoal = dict()
+
+cadastro_pessoal['nome'] = str(input('Nome: '))
+cadastro_pessoal['ano_nasc'] = int(input('Ano de Nascimento: '))
+cadastro_pessoal['n_carteira'] = int(input('Nº da carteira de trabalho (0 se não tem): '))
+
+if cadastro_pessoal['n_carteira'] > 0:
+    cadastro_pessoal['ano_contrato'] = int(input('Ano da Primeira contratação: '))
+    cadastro_pessoal['salario'] = float(input('Salário Atual: R$'))
+
+    print('==='*10)
+
+    print(f'- Nome no cadastro : {cadastro_pessoal["nome"]}')
+    print(f'- Idade atual: {date.today().year - cadastro_pessoal["ano_nasc"]}')
+    print(f'- Nº da carteira: {cadastro_pessoal["n_carteira"]}')
+    print(f'- Contratação realizada em {cadastro_pessoal["ano_contrato"]}')
+    print(f'- Salário atual é : {cadastro_pessoal["salario"]}')
+    print(f'- Para a aponsentadoriam faltam: {65 - (date.today().year - cadastro_pessoal["ano_contrato"])} anos')
+
+else:
+    cadastro_pessoal['n_carteira'] = 'Não Disponivel'
+    print(f'- Nome no cadastro : {cadastro_pessoal["nome"]}')
+    print(f'- Idade atual: {date.today().year - cadastro_pessoal["ano_nasc"]}')
+    print(f'- Nº da carteira: {cadastro_pessoal["n_carteira"]}')
