@@ -59,6 +59,7 @@ for i, v in enumerate(ranking):
     sleep(0.5)
 '''
 
+'''
 #92
 
 from datetime import date
@@ -87,3 +88,38 @@ else:
     print(f'- Nome no cadastro : {cadastro_pessoal["nome"]}')
     print(f'- Idade atual: {date.today().year - cadastro_pessoal["ano_nasc"]}')
     print(f'- Nº da carteira: {cadastro_pessoal["n_carteira"]}')
+'''
+'''
+#93
+#Cadastro de jogador de futebol
+
+ficha_jogador = dict()
+gols = list()
+
+ficha_jogador['nome']  = str(input('Nome do Jogador: '))
+partidas = int(input(f' Quantas partida {ficha_jogador["nome"]} jogou? '))
+
+for q in range(0,partidas):
+    gols.append(int(input(f'    Quantos gols ele fez na {q+1}? ')))
+
+ficha_jogador['gols'] = gols
+ficha_jogador['total'] = sum(gols)
+
+print('==='*10)
+print(ficha_jogador)
+print('==='*10)
+
+for cha,dado in ficha_jogador.items():
+    print(f'O campo {cha} tem o valor {dado}')
+
+print('==='*10)
+print(f'O jogador {ficha_jogador["nome"]} jogou {len(gols)} Partidas.')
+
+for N_P, G_P in enumerate(gols):
+    print(f'    => Na partida {N_P + 1}, ele fez {G_P} gols.')
+
+print(f'Foi um total de {ficha_jogador["total"]} gols.')
+'''
+
+#94
+
