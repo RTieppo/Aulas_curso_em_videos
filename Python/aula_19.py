@@ -120,6 +120,65 @@ for N_P, G_P in enumerate(gols):
 
 print(f'Foi um total de {ficha_jogador["total"]} gols.')
 '''
-
+'''
 #94
+#unindo dicionario nas listas
 
+
+dados = dict()
+
+cadastro_geral = list()
+
+media = 0
+
+print('Cadastro de pessoas')
+
+while True:
+    print('=='*20)
+    dados['nome'] = str(input('\nNome: '))
+    while True:
+        sexo = str(input('Sexo: [M/F]')).upper().strip()[0]
+
+        if sexo in 'MF':
+            dados['Sexo'] = sexo
+            break
+        else:
+            print('\nErro! por favor, digite apenas M ou F.')
+    
+    dados['idade'] = int(input('Idade: '))
+    media += dados['idade']
+
+    while True:
+        continua = str(input('Quer continuar? [S/N]')).upper().strip()[0]
+
+        if continua in'SN':
+            cadastro_geral.append(dados.copy())
+            break
+        else:
+            print('\nErro! por favor, digite apenas S ou N.')
+    
+    if continua == 'S':
+        dados.clear()
+
+    elif continua == 'N':
+        break
+
+
+print('===' *10)
+print(f'A) Ao todo temos {len(cadastro_geral)} pessoas cadastradas.')
+print(f'B) A média de idade é de {media/len(cadastro_geral):.2f} anos.')
+
+print(f'C) As mulheres cadastradas Foram: ',end='')
+for s in cadastro_geral:
+    if s['Sexo'] in 'F':
+        print(f'{s["nome"]} ', end='')
+
+print('\nD) A lista de pessoas que estão acima da média é:')
+
+for pe in cadastro_geral:
+    if pe['idade'] > media/len(cadastro_geral):
+        print(f'nome = {pe["nome"]}; sexo = {pe["Sexo"]}; idade = {pe["idade"]}\n')
+
+print('<< Encerrando >>')
+
+'''
