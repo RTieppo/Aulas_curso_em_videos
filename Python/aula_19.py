@@ -182,3 +182,70 @@ for pe in cadastro_geral:
 print('<< Encerrando >>')
 
 '''
+
+#95
+#aprimorando os dicionarios
+
+from operator import le
+
+
+ficha_jogador = dict()
+
+gols = list()
+
+geral_jogadores = list()
+
+while True:
+    print('==='*10)
+    ficha_jogador['nome']  = str(input('Nome do Jogador: '))
+    partidas = int(input(f' Quantas partida {ficha_jogador["nome"]} jogou? '))
+
+    for q in range(0,partidas):
+        gols.append(int(input(f'    Quantos gols ele fez na {q+1}? ')))
+    
+
+    ficha_jogador['gols'] = gols[:]
+    ficha_jogador['total'] = sum(gols)
+    
+    while True:
+        continua = str(input('Quer continuar? [S/N] ')).upper().strip()[0]
+
+        if continua in 'SN':
+            geral_jogadores.append(ficha_jogador.copy())
+            break
+        else:
+            print('ERRO! Entrada invalida digite S ou N.')
+    
+    if continua == 'S':
+        gols.clear()
+        ficha_jogador.clear()
+
+    else:
+        break
+
+print('==='*10)
+print('Cod. nome    gols    Total')
+
+#formatação de terminal no exercicio
+for cod,info in enumerate(geral_jogadores):
+    print(f'{cod}   {info["nome"]}  {info["gols"]}  {info["total"]}')
+
+print('==='*10)
+
+while True:
+    infor = int(input('Mostrar dados gerais de qual jogador? (999 para parar) '))
+
+    if infor == 999:
+        print('<< Encerrando >>')
+        break
+    
+    elif infor >= len(geral_jogadores):
+        print(f'ERRO! Cod. {infor} de jogador invalido ')
+    
+    else:
+        print(f'-- Levantamento do jogador {geral_jogadores[infor]["nome"]}:')
+        
+        for chave, info in enumerate(geral_jogadores[infor]['gols']):
+            print(f'    No jogo {chave+1} fez {info}')
+    print('==='*10)
+    
