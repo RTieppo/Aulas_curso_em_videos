@@ -182,7 +182,7 @@ for pe in cadastro_geral:
 print('<< Encerrando >>')
 
 '''
-
+'''
 #95
 #aprimorando os dicionarios
 
@@ -249,3 +249,4 @@ while True:
             print(f'    No jogo {chave+1} fez {info}')
     print('==='*10)
     
+'''
