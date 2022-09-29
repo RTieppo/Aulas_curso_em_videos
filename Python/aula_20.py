@@ -12,4 +12,16 @@ print('----'*10)
 
 calculo_area(float(input('Largura (m): ')), float(input('Comprimeto (m): ')))
 '''
+'''
+#97
+
+#print especial
+
+def print_e(valor):
+    print('--'*len(valor))
+    print(f'{valor:^10}')
+    print('--'*len(valor))
+
+print_e(str(input('Digite o alguma coisa: ')))
+'''
 
