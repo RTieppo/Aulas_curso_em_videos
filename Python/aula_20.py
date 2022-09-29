@@ -72,3 +72,33 @@ print('Sua vez:')
 contador(int(input('Início: ')), int(input('Fim: ')), int(input('Passo: ')))
 
 '''
+
+'''
+#99
+#Função que descobre o maior
+
+from time import sleep
+
+def analise(* núm):
+    valor_base = 0
+    print('=='*30)
+    print('Analisando os valores passados...')
+    for n in núm:
+        print(f'{n}', end=' ', flush=True)
+        sleep(0.2)
+        if n >valor_base:
+            valor_base = n
+    print(f'Foram informados {len(núm)} valores ao todo')
+    print(f'O maior valor informado foi {valor_base}')
+
+
+analise(10,5,6,8)
+
+analise(10,2,5,11,15)
+
+analise(0)
+
+analise()
+'''
+
+ 
