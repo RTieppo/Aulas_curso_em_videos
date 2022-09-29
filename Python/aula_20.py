@@ -100,5 +100,28 @@ analise(0)
 
 analise()
 '''
+'''
+ #100
+#função para sortear e somar
+from random import randint
+from time import sleep
+aletorio = list()
 
- 
+def sorte():
+    print('Sorteando 5 valores da lista: ', end='')
+    for nu in range(0,5):
+        numero = randint(0,10)
+        print(f'{numero}', end=' ', flush=True)
+        sleep(0.3)
+        aletorio.append(numero)
+
+def soma():
+    soma = 0
+    for par in aletorio:
+        if par %2 == 0:
+            soma += par
+    print(f'\nSomando os valores sorteados {aletorio}, temos: {soma}')
+
+exetuta = sorte()
+exetuta1 = soma()
+'''
