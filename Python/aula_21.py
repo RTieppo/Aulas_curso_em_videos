@@ -59,4 +59,22 @@ fatorial(numm, valida)
 
 help(fatorial)
 '''
+'''
+#103
+#ficha do jogador
 
+def cadastro(nome='<Desconhecido>', gols=0):
+    print(f'O jogador{nome} fez {gols} gol(s) no campeonato.')
+
+n = str(input('Nome do jogador: '))
+g = str(input('Número de gols: '))
+
+if g.isnumeric():
+    g = int(g)
+
+if n.strip() == '':
+    cadastro(gols = g)
+
+else:
+    cadastro(n,g)
+'''
