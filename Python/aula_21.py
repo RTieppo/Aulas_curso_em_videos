@@ -78,3 +78,32 @@ if n.strip() == '':
 else:
     cadastro(n,g)
 '''
+'''
+#104
+#validaddor de dados em python
+
+def le_numero(valor):
+    ok = False
+    numerico = 0
+
+    while True:
+        numero = str(input(valor)).upper().strip()
+        print('=='*20)
+        if numero.isnumeric():
+            numerico = int(numero)
+            ok = True
+        else:
+            print('\033[0;31mErro! Digite um número inteiro válido.\033[m')
+        
+        if ok:
+            break
+    return numerico
+
+numero = le_numero('Digite um número: ')
+
+print(f'O numero que você digitou foi {numero}')
+'''
+
+#105
+#Analisando e gerando Dicionários
+
