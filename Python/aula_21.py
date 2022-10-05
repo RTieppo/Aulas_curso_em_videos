@@ -103,7 +103,28 @@ numero = le_numero('Digite um número: ')
 
 print(f'O numero que você digitou foi {numero}')
 '''
-
+'''
 #105
 #Analisando e gerando Dicionários
 
+
+def notas(*n,sit=False):
+    info_situação = dict()
+    info_situação['Total: '] = len(n)
+    info_situação['Maior: '] = max(n)
+    info_situação['Menor: '] = min(n)
+    info_situação['Média: '] = sum(n)/len(n)
+    if sit == True:
+        if info_situação['Média: '] >= 7:
+            info_situação['Situação: '] = 'Boa'
+        elif info_situação['Média: '] >= 5:
+            info_situação['Situação: '] = 'Razoável'
+        
+        else:
+            info_situação['Situação: '] = 'Ruim'
+    return info_situação
+
+
+notas_entrada = notas(5,10,2.5,9,5, sit= True)
+print(notas_entrada)
+'''
