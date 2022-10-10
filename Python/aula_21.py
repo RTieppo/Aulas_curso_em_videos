@@ -128,3 +128,46 @@ def notas(*n,sit=False):
 notas_entrada = notas(5,10,2.5,9,5, sit= True)
 print(notas_entrada)
 '''
+'''
+#106
+#Interactive helping system in Python
+
+from time import sleep
+
+cores = ('\033[m', #0 - sem cor
+'\033[0;30;41m', #1 - vermelho
+'\033[0;30;42m', #2 - verde
+'\033[0;30;43m', #3 - amarelo
+'\033[0;30;44m', #4 - azul
+'\033[0;30;45m', #5 - roxo
+'\033[7;30m', #6 - branco
+);
+
+def ajuda(comando):
+    titulo(f'Acessando o manual do comando \'{comando}\'',4)
+    print(cores[6],end='')
+    help(comando)
+    print(cores[0], end='')
+    sleep(2)
+
+def titulo(mensagem, cor=0 ):
+    tamanho = len(mensagem) + 4
+    print(cores[cor], end='')
+    print('~'*tamanho)
+    print(f'{mensagem}')
+    print('~'* tamanho)
+    print(cores[0], end='')
+    sleep(1)
+
+comando = ''
+
+while True:
+    titulo('SISTEMA DE AJUDA PyHALP',2)
+    comando = str(input('Função ou Biblioteca > '))
+    if comando.upper() == 'FIM':
+        break
+    else:
+        ajuda(comando)
+
+titulo('Até logo!',1)
+'''
