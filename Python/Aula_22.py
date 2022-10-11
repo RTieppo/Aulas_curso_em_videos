@@ -43,3 +43,13 @@ from Modulos_aula_21 import exercicio_110
 valor = float(input('Digite o preço: R$'))
 exercicio_110.resumo(valor)
 '''
+'''
+#111
+#ajustando modulos
+
+from Modulos_aula_21.utilidades_cv import moeda
+
+valor = float(input('Digite o preço: R$'))
+moeda.resumo(valor)
+
+'''
