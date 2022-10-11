@@ -53,3 +53,12 @@ valor = float(input('Digite o preço: R$'))
 moeda.resumo(valor)
 
 '''
+'''
+#112
+#Analise de dados monetaria
+
+from Modulos_aula_21.utilidades_cv import moeda, dado
+
+valor = dado.leia_entrada('Digite o preço: R$')
+moeda.resumo(valor)
+'''
