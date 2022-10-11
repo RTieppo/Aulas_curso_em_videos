@@ -33,3 +33,13 @@ print(f'O dobro de {exercicio_109.moeda(valor)} é {exercicio_109.dobro(valor,Tr
 print(f'Aumentando 10%, temos: R${exercicio_109.porcento(valor,True)}')
 print(f'Reduzindo o valor em 15%, temos: {exercicio_109.menos_porcentagem(valor,True)}')
 '''
+
+'''
+#110
+#Reduzindo ainda mais seu programa
+
+from Modulos_aula_21 import exercicio_110
+
+valor = float(input('Digite o preço: R$'))
+exercicio_110.resumo(valor)
+'''
