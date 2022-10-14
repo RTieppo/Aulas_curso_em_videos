@@ -1,4 +1,5 @@
 #113 
+
 #Melhorando função
 def leia_int(num):
     while True:
@@ -24,7 +25,7 @@ def leia_real(num):
         
         except KeyboardInterrupt:
             print('Usuario preferiu não continuar')
-            return 0
+
         
         else:
             return analise
@@ -33,4 +34,9 @@ valor_int = leia_int('Digite um valor inteiro: ')
 valor_real = leia_real('Digite um valor Real: ')
 print(f'O valor Inteiro foi {valor_int} e o real foi {valor_real}')
 
- 
+
+ #114
+ #verifica se site está acessivel.
+
+
+
