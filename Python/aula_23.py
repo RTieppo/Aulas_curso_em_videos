@@ -1,5 +1,5 @@
 #113 
-
+'''
 #Melhorando função
 def leia_int(num):
     while True:
@@ -33,10 +33,20 @@ def leia_real(num):
 valor_int = leia_int('Digite um valor inteiro: ')
 valor_real = leia_real('Digite um valor Real: ')
 print(f'O valor Inteiro foi {valor_int} e o real foi {valor_real}')
+'''
 
-
+'''
  #114
  #verifica se site está acessivel.
+import urllib
+import urllib.request
 
+try:
+    site = urllib.request.urlopen('https://github.com/RTieppo/RTieppo/edit/main/README.md')
 
-
+except urllib.error.URLError:
+    print('O site está inacessivel no momento.')
+else:
+    print('site está ativo.')
+    print(site.read())
+'''
