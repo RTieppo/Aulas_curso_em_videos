@@ -4,17 +4,23 @@
 from modulos_aula_115 import *
 from time import sleep
 
+
+verifica_cria = valida_arquivo()
+print(verifica_cria)
+
 while True:
     resposta_user = menu(['Ver pessoa cadastrada','Cadastrar nova Pessoa', 'Sair do Sistema'])
 
     if resposta_user == 1:
-        cabeçalho('Opção 1')
+        cabeçalho('Pessoas Cadastradas')
+        leitor_ark()
     
     elif resposta_user == 2:
-        cabeçalho('Opção 2')
+        cabeçalho('Cadastro de Pessoa')
+        cadastra_pesoas()
     
     elif resposta_user == 3:
-        cabeçalho('Opção 3')
+        cabeçalho('Saindo so Programa')
         break
 
     else:
