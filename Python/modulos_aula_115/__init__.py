@@ -85,5 +85,4 @@ def cadastra_pesoas():
             grava.close
             cabeçalho('Nome Salvo!')
             break
-
-
+        
