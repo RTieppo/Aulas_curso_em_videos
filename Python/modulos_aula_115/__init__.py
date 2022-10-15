@@ -52,13 +52,19 @@ def valida_arquivo():
             os.makedirs(r'C:\Users\Public\cadastro')
 
 def leitor_ark():
-    l_ark = open(r'C:\Users\Public\cadastro\ark.txt', 'r', encoding='UTF-8').read()
-    print(l_ark)
+    l_ark = open(r'C:\Users\Public\cadastro\ark.txt', 'r', encoding='UTF-8').readlines()
+    for lin in l_ark:
+        dado = lin.split(';')
+        dado[1] = dado[1].replace('\n','')
+        print(f'{dado[0]:<20}{dado[1]:>3} anos')
+
 
 def cadastra_pesoas():
     while True:
             nome = str(input('Nome: ').strip())
-            if nome.isalpha():
+            nome_ajuste = nome.replace(' ','')
+            print(nome_ajuste)
+            if nome_ajuste.isalpha():
                 grava = open(r'C:\Users\Public\cadastro\ark.txt','a',encoding='UTF-8')
                 grava.write(nome)
                 grava.close
@@ -75,7 +81,9 @@ def cadastra_pesoas():
         
         else:
             grava = open(r'C:\Users\Public\cadastro\ark.txt','a',encoding='UTF-8')
-            grava.write(f' {idade}\n')
+            grava.write(f';{idade}\n')
             grava.close
             cabeçalho('Nome Salvo!')
             break
+
+
