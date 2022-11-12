@@ -14,12 +14,7 @@ if con.is_connected():
 if con.is_connected():
     cursor = con.cursor()
 
-    cursor.execute("""select g.nome, c.nome from gafanhotos as g
-    join garafanhoto_assiste_curso as a
-    on g.id = a.idgafanhoto
-    join cursos as c
-    on c.idcurso = a.idcurso
-    order by g.nome;""")
+    cursor.execute("select * from cursos; ")
 
     linhas = cursor.fetchall()
 
@@ -29,6 +24,4 @@ if con.is_connected():
 if con.is_connected():
     cursor.close()
     con.close()
-
-
 
