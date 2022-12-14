@@ -36,14 +36,18 @@ n2 = float(input('informa segundo numero: '))
 s = n1 + n2
 print('a soma entre {} e {} vale {}'.format(n1,n2,s))
 '''
-'''
+
 info = input('Digite alguma coisa: ')
 print('o tipo primitivo dessa valoe é', type(info))
+
 print('Só tem espaços?', info.isspace())
+
 print('é um número?', info.isnumeric())
+
 print('é alfabético?', info.isalpha())
+
 print('é alfanumerico?', info.isalnum())
+
 print('está em maiusculas?', info.isupper())
 print('está minusculas?', info.islower())
 print('está capitalizada?', info.istitle())
-'''
